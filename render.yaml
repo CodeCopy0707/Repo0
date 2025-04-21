@@ -2,9 +2,7 @@
 services:
   - type: web
     name: phi3-mini-api
-    env: python
+    env: docker
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
-    healthCheckPath: /
+    dockerfilePath: ./Dockerfile
     autoDeploy: true
